@@ -81,8 +81,12 @@ public partial class generic : System.Web.UI.Page
     {
         string address = "browse.aspx";
         if (txtTitle.Text != "")
+        {
             address += "?byTitle=" + txtTitle.Text;
-        if (txtAuthor.Text != "")
+            if (txtAuthor.Text != "")
+                address += "&byAuthor=" + txtAuthor.Text;
+        }
+        else if (txtAuthor.Text != "")
             address += "?byAuthor=" + txtAuthor.Text;
         Response.Redirect(address);
     }
