@@ -40,7 +40,16 @@
 								<h1>Browse All Polls</h1>
 								<p>Contribute to the community by answering polls.</p>
                             </header>
-                            
+                            <form ID="formSearch" runat="server">
+                                <div class="row">
+						    	    <div class="3u 12u$(medium)"><h4>Search by Title:</h4></div>
+                                    <div class="2u 12u$(medium)"><asp:TextBox ID="txtTitle" runat="server"></asp:TextBox></div>
+                                    <div class="3u 12u$(medium)"><h4>Search by Author:</h4></div>
+                                    <div class="2u 12u$(medium)"><asp:TextBox ID="txtAuthor" runat="server"></asp:TextBox></div>
+                                    <div class="2u$ 12u$(medium)"><asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click"></asp:Button></div>
+                                </div>
+                            </form>
+
                             <table><%=PollTable %></table>
 						</div>
 					</section>
@@ -50,12 +59,6 @@
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="copyright">
-					<ul class="icons">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon fa-snapchat"><span class="label">Snapchat</span></a></li>
-					</ul>
 					<p>&copy; Untitled. All rights reserved. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.</p>
 				</div>
 			</footer>
